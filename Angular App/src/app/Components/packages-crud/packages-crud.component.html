@@ -1,0 +1,92 @@
+<app-navbar></app-navbar>
+<div class="container">
+
+  <div *ngIf="create==true" class="card-container">
+    <div class="card">
+        <h2>Create Package</h2>
+        <button mat-raised-button color="primary" type="submit" (click)="toggle()">Update Instead </button>
+      <form class="row"  #packageForm="ngForm">
+        <mat-form-field class="col-6">
+          <span>Company Name</span>
+          <input matInput placeholder="Company Name" name="companyName" [(ngModel)]="userDat.companyName" disabled required>
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <span>Package Id</span>
+          <input matInput placeholder="Package Id" name="packageId" [(ngModel)]="packageDat.packageId"  required>
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <span>Package Name</span>
+          <input matInput placeholder="Package Name" name="packageName" [ngModel]="packageDat.packageName" required>
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <span>Plan  Speed</span>
+          <input matInput type="number" placeholder="Speed" name="speed" [(ngModel)]="packageDat.speed" required>
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <span>Price</span>
+          <input matInput type="number" placeholder="Price" name="price" [(ngModel)]="packageDat.price" required>
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <span>Plan Duration (Days)</span>
+          <input matInput type="number" placeholder="Duration" name="duration" [(ngModel)]="packageDat.duration" required>
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <span>Installation Fees (INR)</span>
+          <input matInput type="number" placeholder="Installation Fee" name="installationFee" [(ngModel)]="packageDat.installationFee" required>
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <span>Plan Description</span>
+          <textarea matInput placeholder="Description" name="description" [(ngModel)]="packageDat.description" required></textarea>
+        </mat-form-field>
+        
+        <br><br><br>
+        <button class="button" mat-raised-button color="primary" type="submit" (click)="createPackage()">Submit </button>
+      </form>
+      
+      </div>
+    </div>
+  
+    <div *ngIf="create==false" class="card-container">
+      <div class="card">
+          <h2>Update Package</h2>
+          <button mat-raised-button color="primary" type="submit" (click)="toggle()">Create</button>
+          <form class="row" #packageForm="ngForm" (ngSubmit)="updatePackage()">
+            <mat-form-field class="col-5">
+              <span>Company Name</span>
+              <input matInput placeholder="Company Name" name="companyName" [(ngModel)]="userDat.companyName" disabled required>
+            </mat-form-field>
+            <mat-form-field class="col-5">
+              <span>Package Name</span>
+              <input matInput placeholder="Package Name" name="packageName" [(ngModel)]="packageDat.packageName" required>
+            </mat-form-field>
+            <mat-form-field class="col-5">
+              <span>Plan Speed</span>
+              <input matInput type="number" placeholder="Speed" name="speed" [(ngModel)]="packageDat.speed" required min="1">
+            </mat-form-field>
+            <mat-form-field class="col-5">
+              <span>Price</span>
+              <input matInput type="number" placeholder="Price" name="price" [(ngModel)]="packageDat.price" required min="1">
+            </mat-form-field>
+            <mat-form-field class="col-5">
+              <span>Plan Duration (Days)</span>
+              <input matInput type="number" placeholder="Duration" name="duration" [(ngModel)]="packageDat.duration" required min="1">
+            </mat-form-field>
+            <mat-form-field class="col-5">
+              <span>Installation Fees (INR)</span>
+              <input matInput type="number" placeholder="Installation Fee" name="installationFee" [(ngModel)]="packageDat.installationFee" required min="1">
+            </mat-form-field>
+            <mat-form-field class="col-5">
+              <span>Plan Description</span>
+              <textarea matInput placeholder="Description" name="description" [(ngModel)]="packageDat.description" required></textarea>
+            </mat-form-field>
+            <mat-form-field class="col-5">
+              <span>Package Id</span>
+              <input matInput placeholder="Package Id" name="packageId" [(ngModel)]="packageDat.packageId" required pattern="^(?!\s*$).+">
+            </mat-form-field>
+            <br>
+            <button class="row col-8" mat-raised-button color="primary" type="submit" [disabled]="!packageForm.form.valid">Submit</button>
+          </form>
+       
+        </div>
+      </div>
+</div>

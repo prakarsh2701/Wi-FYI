@@ -1,0 +1,55 @@
+<app-navbar class="position-absolute w-100"></app-navbar>
+<div class="temp">
+    <div class="upper">
+        <div class="row">
+            <div class="row flex-fill">
+                <div class="firstcard">
+                    <div class="card align-content-center">
+                        <h3 class="card-title">  User Details </h3>
+                        <p class="card-text">
+                            <span style="font-weight: bold;">First Name:</span> {{userDat.userFirstName}}
+                        </p>
+                        <p class="card-text">
+                            <span style="font-weight: bold;">Last Name:</span> {{userDat.userLastName}}
+                        </p>
+                        <p class="card-text">
+                            <span style="font-weight: bold;">Email:</span> {{userDat.email}}
+                        </p>
+                        <p class="card-text">
+                            <span style="font-weight: bold;">Phone Number:</span> {{userDat.phoneNumber}}
+                        </p>    
+                        <p class="card-text">
+                            <span style="font-weight: bold;">Address:</span> {{userDat.address}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="secondcard flex col-4 align-content-center col" *ngFor="let p of packageDat">
+                    <div class="card" >
+                            <h3 class="card-title">Packge Details</h3>
+                            <p class="card-text">
+                                <span style="font-weight: bold;">Package ID:</span> {{p.pack.packageId}}
+                            </p>
+                            <p class="card-text">
+                                <span style="font-weight: bold;">Package Name:</span> {{p.pack.packageName}}
+                            </p>
+                            <p class="card-text">
+                                <span style="font-weight: bold;">Speed:</span> {{p.pack.speed}}
+                            </p>
+                            <p class="card-text">
+                                <span style="font-weight: bold;">Duration:</span> {{p.pack.duration}}
+                            </p>
+                            <p class="card-text">
+                                <span style="font-weight: bold;">Price:</span> {{p.pack.price}}
+                            </p>         
+                        </div>
+                                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+

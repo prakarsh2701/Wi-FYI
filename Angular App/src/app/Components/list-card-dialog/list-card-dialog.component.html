@@ -1,0 +1,39 @@
+<div class="temp">
+    <h1 class="heading">Select any Package</h1>
+    <div class="scrollable-container">
+      <div class="box-container">
+        <ng-container *ngFor="let package of pack; let i = index">
+          <mat-card (click)="setCard(package)">
+            <div class="image">
+              <img mat-card-image class="img" src="assets/images/{{package.companyName}}.png" alt="{{ package.companyName }}">
+            </div>
+            <div class="name">
+              <mat-card-header>
+                <mat-card-title>{{ package.packageName }}</mat-card-title>
+                <mat-card-subtitle>{{ package.companyName }}</mat-card-subtitle>
+				  <mat-card-subtitle><app-avgrating [packageId]="package.packageId"></app-avgrating></mat-card-subtitle>
+              </mat-card-header>
+            </div>
+            <div class="description">
+              <mat-card-content>
+                <p>{{ package.description }}</p>
+              </mat-card-content>
+            </div>
+            <!-- Uncomment this section if needed -->
+            <!--
+            <div class="button">
+              <mat-card-actions>
+                <button mat-button>View</button>
+              </mat-card-actions>
+            </div>
+            -->
+          </mat-card>
+          <!-- Close the row and start a new one after every 3 cards -->
+          <div *ngIf="i % 3 === 2" class="clear-float"></div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  
+  
+  

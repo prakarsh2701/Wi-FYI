@@ -1,0 +1,21 @@
+<mat-dialog-content class="main-dialoge">
+  <div class="dialog-content">
+    <div class="dialog-image">
+      <img src="assets/images/{{ packDat.companyName }}.png" alt="{{ packDat.companyName }}">
+    </div>
+    <div class="dialog-details">
+      <h2>{{ packDat.packageName }}</h2>
+      <p>{{ packDat.companyName }}</p>
+      <p>{{ packDat.description }}</p>
+      <p>Data Speed: {{ packDat.speed }}</p>
+      <p>Price: {{ packDat.price }}</p>
+      <p>Duration: {{ packDat.duration }}</p>
+      <p>Installation Fees: {{ packDat.installationFee }}</p>
+      <p><mat-card-subtitle><app-avgrating [packageId]="packDat.packageId"></app-avgrating></mat-card-subtitle></p>
+    </div>
+    <div *ngIf="role=='User'" class="dialog-actions">
+      <button mat-button (click)="closeDialog()">Close</button>
+      <button mat-raised-button color="primary" (click)="buy(packDat.packageId)">Buy</button>
+    </div>
+  </div>
+</mat-dialog-content>

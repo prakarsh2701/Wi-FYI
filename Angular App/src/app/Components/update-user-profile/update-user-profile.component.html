@@ -1,0 +1,35 @@
+<app-navbar class="position-absolute w-100"></app-navbar>
+<div class="background">
+<mat-card class="update-profile-card">
+    <mat-card-header class="update-profile-header">
+      
+      <mat-card-title><h1><img src="assets\images\baseline_account_circle_black_18dp.png"> Update Profile</h1></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form (ngSubmit)="onSubmit()" #UpdateForm="ngForm">
+        <div class="name-fields">
+          <mat-form-field class="half-width">
+            <input matInput placeholder="First Name" name="firstName" [(ngModel)]="user.UserFirstName" required>
+          </mat-form-field>
+          <mat-form-field class="half-width">
+            <input matInput placeholder="Last Name" name="lastName" [(ngModel)]="user.UserLastName" required>
+          </mat-form-field>
+        </div>
+        <mat-form-field class="full-width">
+          <textarea matInput placeholder="Address" name="address" [(ngModel)]="user.address" required></textarea>
+        </mat-form-field>
+        <div class="name-fields">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Phone Number" name="phoneNumber" [(ngModel)]="user.phoneNumber" required pattern="^\d{10}$">
+          <mat-error *ngIf="!phonePatternCheck()">Invalid phone number format (10 digits required)</mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Email" name="email" [(ngModel)]="user.email" [disabled]="true">
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">Submit</button>
+        </div>
+        
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

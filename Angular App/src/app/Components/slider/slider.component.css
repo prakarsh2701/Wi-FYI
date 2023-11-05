@@ -1,0 +1,103 @@
+/* @import '~animate.css/animate.min'; */
+body {
+ margin: 0;
+ padding: 0;
+}
+
+button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* img {
+  display: block;
+  width: auto;
+} */
+
+section {
+  width: 100%;
+  overflow: hidden;
+
+}
+
+article {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+  animation: bannermove 10s linear infinite;
+  animation-iteration-count: infinite;
+}
+.animated fadeIn infinite{
+  display: flex;
+  width: 200%;
+  animation: bannermove 10s linear infinite;
+  animation-iteration-count: infinite;
+}
+
+ /* article.paused {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+} */
+
+div {
+  width: 100%;
+}
+
+ul {
+  width: 100%;
+  display: flex;
+  list-style-type: none;
+  margin: 0px 0px 0px 0px;
+  justify-content: space-between;
+
+}
+li{
+  padding-top: 10%;
+  background-color: rgb(255, 255, 0, 0.2);
+  color: #5c0364;
+  justify-content: center;
+  display: inline;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 10px;
+}
+
+li img{
+  width:80%;
+  height:70%;
+  align-content: center;
+  background-color: rgb(245, 252, 205, 1.5);
+}
+.h3{
+  font-family: 'Bitter', serif;
+  color: #12486b;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+/* li:nth-child(2) {
+  background: green;
+}
+
+li:nth-child(3) {
+  background: yellow;
+} */
+.bord{
+ border-bottom: 0px;
+ background-color: lightyellow;
+ /* padding: 10px 10px 10px 10px; */
+ padding-left: 0;
+}
+.bg{
+  background-color: rgb(245, 252, 205, 0.8);
+}
+.bord li{
+  border: 2px solid #ff0053 ;
+  text-align: center;
+  padding: 10px 10px;
+}
+.stt{
+  background-color: #B0E7C9;
+  padding-bottom: 50px;
+}

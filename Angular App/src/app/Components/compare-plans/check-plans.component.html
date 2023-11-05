@@ -1,0 +1,81 @@
+<app-navbar></app-navbar>
+<div class="temp">
+<div class="container" >
+  <h4 class="text-center my-4">
+    Compare Plans for the best deal
+  </h4>
+  <div class="split-screen ">
+    <div class="card flex col-6  mx-2" *ngIf="selectedItem1 == null; else selectedItem1Template">
+      select the plan
+      <button (click)="openDialog1('left')">+</button>
+    </div>
+
+    <ng-template #selectedItem1Template>
+
+      <mat-card class="box col-6 mx-2">
+        <div class="image col-3">
+          <img mat-card-image class="img" [src]="'assets/images/' + selectedItem1.companyName + '.png'" [alt]="selectedItem1.companyName">
+        </div>
+        <div class="name col-9"> <!-- Adjust the column size -->
+          <mat-card-header>
+            <mat-card-title>{{ selectedItem1.packageName }}</mat-card-title>
+            <mat-card-subtitle>{{ selectedItem1.companyName }}</mat-card-subtitle>
+            <mat-card-subtitle><app-avgrating [packageId]="selectedItem1.packageId"></app-avgrating></mat-card-subtitle>
+          </mat-card-header>
+        </div>
+        <div class="description col-9"> <!-- Adjust the column size -->
+          <mat-card-content>
+            <p>{{ selectedItem1.description }}</p>
+            <p>Data Speed: {{ selectedItem1.speed }}</p>
+            <p>Price: {{ selectedItem1.price }}</p>
+            <p>Duration: {{ selectedItem1.duration }}</p>
+            <p>Installation Fees: {{ selectedItem1.installationFee }}</p>
+            <p>Average Rating: {{ 0 }}</p>
+          </mat-card-content>
+        </div>
+        <div  *ngIf="role=='User'" class="button col-9"> <!-- Adjust the column size -->
+          <mat-card-actions>
+            <button mat-button (click)="buy(selectedItem1.packageId)">Buy</button>
+          </mat-card-actions>
+        </div>
+      </mat-card>
+    </ng-template>
+
+    <div class="card flex col-6 mx-4" *ngIf="selectedItem2 == null; else selectedItem2Template">
+      select the plan
+      <button (click)="openDialog2('right')">+</button>
+    </div>
+
+    <ng-template #selectedItem2Template>
+      <mat-card class="box col-6 mx-2">
+        <div class="image col-3">
+          <img mat-card-image class="img" [src]="'assets/images/' + selectedItem2.companyName + '.png'" [alt]="selectedItem1.companyName">
+        </div>
+        <div class="name col-9"> <!-- Adjust the column size -->
+          <mat-card-header>
+            <mat-card-title>{{ selectedItem2.packageName }}</mat-card-title>
+            <mat-card-subtitle>{{ selectedItem2.companyName }}</mat-card-subtitle>
+            <mat-card-subtitle><app-avgrating [packageId]="selectedItem2.packageId"></app-avgrating></mat-card-subtitle>
+			 <mat-card-subtitle><app-avgrating></app-avgrating></mat-card-subtitle>
+          </mat-card-header>
+        </div>
+        <div class="description col-9"> <!-- Adjust the column size -->
+          <mat-card-content>
+            <p>{{ selectedItem2.description }}</p>
+            <p>Data Speed: {{ selectedItem2.speed }}</p>
+            <p>Price: {{ selectedItem2.price }}</p>
+            <p>Duration: {{ selectedItem2.duration }}</p>
+            <p>Installation Fees: {{ selectedItem2.installationFee }}</p>
+            <p>Average Rating: {{ 0 }}</p>
+          </mat-card-content>
+        </div>
+        <div *ngIf="role=='User'" class="button col-9"> <!-- Adjust the column size -->
+          <mat-card-actions>
+            <button mat-button (click)="buy(selectedItem2.packageId)">Buy</button>
+          </mat-card-actions>
+        </div>
+      </mat-card>
+    </ng-template>
+  </div>
+</div>
+</div>

@@ -1,0 +1,12 @@
+
+<div *ngIf="this.gotrating == 0" class="star-rating-container star-rating-animation" fxLayout="row" fxLayoutAlign="start center">
+  <div *ngFor="let star of stars" [ngClass]="[star.class]" (click)="giveRating(star.id)">
+    <mat-icon (click)="selectStar(star.id)">{{star.icon}}</mat-icon>
+  </div>
+</div>
+
+  <div *ngIf="this.gotrating != 0" class="star-rating-container star-rating-animation" fxLayout="row" fxLayoutAlign="start center">
+    <div *ngFor="let star of stars" [ngClass]="[star.class]" >
+      <mat-icon >{{star.icon}}</mat-icon>
+    </div>
+  </div>

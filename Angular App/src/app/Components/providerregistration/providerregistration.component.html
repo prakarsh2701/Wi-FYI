@@ -1,0 +1,39 @@
+
+<div class="background">
+    <div class="right-panel">
+      <mat-card class="login-card">
+        <div class="flex-fill">
+          <img class="align-content-center" src="assets/images/logo.png" alt="abc" >
+        </div>
+        <mat-card-header>
+          <mat-card-title><h1>Brand Registration</h1></mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <form (ngSubmit)="onProviderRegistration()" #userForm="ngForm">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Email" name="email" [(ngModel)]="provider.email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}">
+              <mat-error *ngIf="userForm.controls['email'].hasError('required')">Email is required.</mat-error>
+              <mat-error *ngIf="userForm.controls['email'].hasError('pattern')">Email must be in a valid format.</mat-error>
+            </mat-form-field>
+          
+            <mat-form-field class="full-width">
+              <input matInput type="password" placeholder="Password" name="password" [(ngModel)]="provider.password" required minlength="8" pattern="^(?=.*[A-Z])(?=.*[@#$%^&+=]).*">
+              <mat-error *ngIf="userForm.controls['password'].hasError('required')">Password is required.</mat-error>
+              <mat-error *ngIf="userForm.controls['password'].hasError('minlength')">Password must be at least 8 characters.</mat-error>
+              <mat-error *ngIf="userForm.controls['password'].hasError('pattern')">Password must have one uppercase letter and one special character.</mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <input matInput type="password" placeholder="Confirm Password" name="confirmPassword" [(ngModel)]="provider.confirmPassword" required>
+                <mat-error *ngIf="provider.password !== provider.confirmPassword && provider.confirmPassword !== ''">Passwords do not match</mat-error>
+              </mat-form-field>
+              <button mat-raised-button color="primary" class="login-button" [disabled]="!userForm.form.valid || provider.password !== provider.confirmPassword">Register</button>
+              <Div class="ref">Already have account
+                <a routerLink="/login">Try Logging In</a>
+               </Div>
+          </form>
+          
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="left-panel"></div>
+  </div>

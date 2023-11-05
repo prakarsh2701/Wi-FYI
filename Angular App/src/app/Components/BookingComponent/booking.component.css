@@ -1,0 +1,111 @@
+.text-center
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: -10%;
+}
+.container
+{
+    background-image: url('src/assets/images/image1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1.0;
+    width: 105%;
+    overflow:hidden;
+    height: 91%;
+    width: 2000px;
+}
+.small-button
+{
+    font-size: 15px; 
+    padding: 5px 10px;
+    width: 50%;
+}
+
+
+/* Custom CSS */
+/* Set a transparent background for the card */
+.firstcard .card {
+  background-color: #e07c548b;
+   margin-left: 20%; 
+   align-items: center;
+   align-content: center;
+  }
+  
+  /* Create a pseudo-element to serve as the background for the text */
+  .firstcard .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e06230; /* Desired background color */
+    opacity: 0.3; /* Adjust the opacity as needed (0.0 to 1.0) */
+    z-index: -1; /* Ensure the pseudo-element is behind the card content */
+  }
+  
+  /* Style the text within the card */
+  .firstcard .card .card-title,
+  .firstcard .card .card-text {
+    color: #000000; /* Dark black color */
+     /* Make the text bold */
+  }
+  /* Custom CSS */
+/* Set a transparent background for the card */
+.secondcard .card {
+  background-color: #e07c548b;
+    margin-right: 20%;
+    align-items: center;
+  }
+  
+  /* Create a pseudo-element to serve as the background for the text */
+  .secondcard .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e06230; /* Desired background color */
+    opacity: 0.3; /* Adjust the opacity as needed (0.0 to 1.0) */
+    z-index: -1; /* Ensure the pseudo-element is behind the card content */
+  }
+  
+  /* Style the text within the card */
+  .secondcard .card .card-title,
+  .secondcard .card .card-text {
+    color: #000000; /* Dark black color */
+     /* Make the text bold */
+  }
+  .firstcard{
+    margin-top: 60px;
+  }
+  .secondcard{
+    margin-top: 60px;
+  }
+  .lowercard .card {
+    background-color: transparent;
+  }
+  
+  /* Create a pseudo-element to serve as the background for the text */
+  .lowercard .card::before {
+    border: none;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e06230; /* Desired background color */
+    opacity: 0.3; /* Adjust the opacity as needed (0.0 to 1.0) */
+    z-index: -1; /* Ensure the pseudo-element is behind the card content */
+  }
+  body, html {
+    overflow-y: hidden;
+  }
+  .lowercard
+  {
+    margin-top: -10%;
+  }

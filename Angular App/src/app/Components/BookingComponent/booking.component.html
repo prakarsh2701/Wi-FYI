@@ -1,0 +1,70 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="upper">
+        <div class="row">
+            <div class="col-6 flex-fill">
+                <div class="firstcard">
+                    <div class="card align-content-center">
+                        <h3 class="card-title">  User Details </h3>
+                        <p class="card-text">
+                            <span style="font-weight: bold;">First Name:</span> {{userDat.userFirstName}}
+                        </p>
+                        <p class="card-text">
+                            <span style="font-weight: bold;">Last Name:</span> {{userDat.userLastName}}
+                        </p>
+                        <p class="card-text">
+                            <span style="font-weight: bold;">Email:</span> {{userDat.email}}
+                        </p>
+                        <p class="card-text">
+                            <span style="font-weight: bold;">Phone Number:</span> {{userDat.phoneNumber}}
+                        </p>    
+                        <p class="card-text">
+                            <span style="font-weight: bold;">Address:</span> {{userDat.address}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="secondcard">
+                    <div class="card  align-content-center">
+                        <h3 class="card-title">Packge Details</h3>
+                        <p class="card-text">
+                            <span style="font-weight: bold;">Package ID:</span> {{packageDat.packageId}}
+                        </p>
+                        <p class="card-text">
+                            <span style="font-weight: bold;">Package Name:</span> {{packageDat.packageName}}
+                        </p>
+                        <p class="card-text">
+                            <span style="font-weight: bold;">Speed:</span> {{packageDat.speed}}
+                        </p>
+                        <p class="card-text">
+                            <span style="font-weight: bold;">Duration:</span> {{packageDat.duration}}
+                        </p>
+                        <p class="card-text">
+                            <span style="font-weight: bold;">Price:</span> {{packageDat.price}}
+                        </p>                         
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="lower text-center">
+        <div class="row">
+            <div class="lowercard">
+                <div class="card" style="width: 18rem;">
+                    <div class="form-group mb-3">
+                        <input type="date" class="form-control" id="selectedDate" placeholder="Select Booking Date"[(ngModel)]="bookingDate" (change)="Order()">
+                    </div>
+                </div>
+            </div>
+            <div class="submitbutton">
+                <button id="rzp-button1" class="btn btn-primary small-button" (click)="Paynow()">Pay</button>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+

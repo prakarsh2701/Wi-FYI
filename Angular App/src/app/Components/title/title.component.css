@@ -1,0 +1,155 @@
+.header {
+    background-color: #3AA4C1; /* Set the background color (e.g., blue) */
+    
+    color: white; /* Set text color (white) */
+    padding: 15px; /* Add padding for spacing */
+  }
+  
+  .inline-content {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+  }
+
+  
+  .logo,img {
+    width: 100px; /* Set logo width as needed */
+    margin-right:auto;
+  }
+  
+  .button{
+     position: relative;
+  }
+
+  .header-button{
+    align-items:flex-start;
+  }
+
+
+  .fa-icon:hover {
+    cursor: pointer; /* or cursor: pointer; for a hand icon */
+}
+  
+
+ 
+
+/* .image-text {
+  text-align: center;
+  position:absolute;
+  
+  width: 100%;
+}
+
+.image-text img {
+  width:100%;
+  background-size: cover;
+} */
+
+
+
+
+.image-container {
+    position: relative;
+  }
+  
+  .image {
+    width: 100%; /* Set the image width as needed*/
+    height: 400px;  /* Maintain the aspect ratio */
+    display:block; /* Remove any extra spacing*/
+  }
+  
+  .text-overlay {
+    position: absolute;
+    top: 250px; /* Adjust as needed to center vertically */
+    left: 150px; /* Adjust as needed to center horizontally */
+    transform: translate(-50%, -50%); /* Center the text */
+    color: black; /* Text color */
+     /* Semi-transparent background for better readability */
+    padding: 10px; /* Adjust as needed for padding around the text */
+    margin-left: 250px;
+    
+    font-size: 20px; /* Control the text size */
+     /* Control the text weight */
+    line-height: 20px;
+    
+  
+  }
+  
+  .custom-button {
+    background-color: #fff; /* Set the background color */
+    color: #fff; /* Set the text color */
+    border: none; /* Remove the border */
+    padding: 10px 20px; /* Set padding */
+    border-radius: 20px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+  }
+  
+  .custom-button:hover {
+    background-color: #0055a6; /* Change background color on hover */
+  }
+  mat-expansion-panel-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  mat-panel-title img {
+    max-width: 50px; /* Adjust the image width as needed */
+    margin-right: 16px; /* Adjust the spacing between image and title */
+  }
+  
+
+  /* Apply a top margin of 20px */
+.image-panel {
+    margin-top: 100px;
+  }
+
+  .sometext{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    
+  
+  }
+
+  .ask{
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+  .footer {
+    position: absolute;
+      
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      
+      width: 100%;
+      height: 40%;
+      margin-top: 10%;
+     
+    }
+    
+    .container {
+      text-align: center;
+    }
+    
+    .col {
+      padding: 10px;
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    ul li {
+      margin: 5px 0;
+    }
+  
+    .icon-container {
+      display: flex; /* Use flexbox to arrange icons in a row */
+      margin-left: 30px;
+  }
+  .fa-icon {
+      margin-left: 10px; /* Add some spacing between icons */
+  }
+    

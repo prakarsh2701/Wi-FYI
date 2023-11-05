@@ -1,0 +1,66 @@
+/* CSS for the "Update Profile" section */
+.background {
+    display: flex;
+    height: 100vh;
+    background-image: url('src\assets\images\updateprofile.png');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+
+.update-profile-card {
+    width: 65%;
+    margin: 2% auto;
+    padding: 20px;
+    background-color:rgba(245, 245, 245, 0.9); /* Background color for the card */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* .update-profile-header {
+    background-color: #2196F3; 
+    color: #fff; 
+    text-align: center;
+    padding: 16px;
+    font-size: 24px;
+    font-weight: bold;
+  } */
+  
+  .name-fields {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .half-width {
+    width: calc(50% - 10px); /* Subtracting margin for spacing */
+    margin-bottom: 10px;
+  }
+  
+  .full-width {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .mat-error {
+    color: red;
+    font-size: 14px;
+  }
+  
+  /* Style the submit button */
+  button[type="submit"] {
+    width: 100%;
+   
+    background-color: #2196F3; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0d47a1; /* Button background color on hover */
+  }
+  

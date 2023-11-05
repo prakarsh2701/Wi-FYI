@@ -1,0 +1,55 @@
+.temp{
+  background-image: url('src/assets/images/compare-packages.png');
+  background-size: cover; 
+  /* background-repeat: no-repeat; */
+  /* width: 90vw; */
+  /* background-attachment: fixed; */
+  opacity: 0.7;
+  /* overflow: hidden; */
+  height: 82vh;
+}
+
+
+.img {
+  max-width: 100px; 
+  max-height: 100px; 
+}
+
+.split-screen {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    width: 100%;
+    
+  }
+  
+  .mat-card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 11%;
+    text-align: center;
+  }
+  
+  button {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  h2{
+    margin: 0;
+    color: #000000;
+    font-family: 'Bitter', serif;
+    font-size: 80px;
+    text-align: center;
+  }
+  .description-section {
+    max-height: 100px; /* Adjust the height as needed */
+    overflow: hidden;
+  }
+  
+  .button-section {
+    height: 50px; /* Adjust the height as needed */
+  }

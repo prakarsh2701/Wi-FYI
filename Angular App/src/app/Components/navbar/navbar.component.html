@@ -1,0 +1,62 @@
+<mat-toolbar  class="mat-elevation-z8">
+     <button  class="sidenav-icon" (click)="toggleSidenav()" >
+        <mat-icon class="mat-menu" >menu</mat-icon>
+        
+      </button>  
+    <img src="../assets/images/Logo-Navbar.png" class="logo" (click)="Title()">
+   
+     <div class="spacer"></div>
+    <div class="row mr-2 ml-auto">
+    <ul class="row m-0 align-items-center">
+        <li>
+          <button mat-button [matMenuTriggerFor]="menu" class="user mt-2 d-flex align-items-center">
+            <img src="../assets/images/profile-photo.jpg"  alt=""  class="user-image mr-1 p-2"/>{{ email }}
+            <mat-icon class="user-image-icon ml-1"
+              >keyboard_arrow_down</mat-icon
+            >
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="logout()">
+              <mat-icon>exit_to_app</mat-icon>
+              Logout
+            </button>
+          </mat-menu>
+        </li>
+      </ul>
+    </div>
+</mat-toolbar>
+
+<div class="layout-container">
+ 
+    <mat-drawer #drawer class="sidenav" mode="side" [opened]="isSidenavOpen" >
+    <div class="nav-links">
+  
+      <ul>
+        <li><a mat-button routerLink="/home" ><mat-icon>home</mat-icon>Home</a></li>
+        <li *ngIf="role == 'User'"><a mat-button  routerLink="/viewuserprofile"><mat-icon>account_box</mat-icon>Profile</a></li>
+        <li *ngIf="role == 'Provider'"> <a mat-button *ngIf="role == 'Provider'" routerLink="/viewproviderprofile"><mat-icon>account_box</mat-icon>Profile</a></li>
+        <li><a mat-button routerLink="/viewplans"><mat-icon>insert_chart</mat-icon>View Plans</a></li>
+        <li *ngIf="role == 'User'"> <a mat-button routerLink="/comparecomponents"><mat-icon>code-compare</mat-icon>Compare Plans</a></li>
+        <li *ngIf="role == 'User'"><a mat-button routerLink="/bookinghistory"><mat-icon>history</mat-icon>Booking History</a></li>
+        <li *ngIf="role == 'Provider'"> <a mat-button *ngIf="role == 'Provider'" routerLink="/packages"><mat-icon>library_books</mat-icon>Alter Package</a></li>
+      </ul>
+    
+    
+   
+    
+   
+    
+    </div>
+    <div class="flex-grow"></div>
+    </mat-drawer>
+  
+
+    <div class="main-content-container">
+    <router-outlet></router-outlet>
+  </div>
+   
+</div>
+    
+   
+
+   

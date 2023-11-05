@@ -1,0 +1,40 @@
+<app-navbar class="position-absolute w-100"></app-navbar>
+<div class="background">
+<mat-card class="card">
+    <mat-card-header class="update-profile-header">
+        <mat-card-title><h1>Update Profile</h1></mat-card-title>
+      </mat-card-header>
+    <form #companyForm="ngForm">
+      <div class="form-row">
+        <div class="form-group">
+          <mat-form-field class="company-name">
+            <input matInput name="companyName" placeholder="Company Name" [(ngModel)]="companyDetails.CompanyName" />
+          </mat-form-field>
+          <mat-form-field class="contact-person">
+            <input matInput name="contactPerson" placeholder="Contact Person" [(ngModel)]="companyDetails.ContactPersonName" />
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <mat-form-field class="email">
+            <input matInput name="email" placeholder="Email" [(ngModel)]="companyDetails.Email" disabled />
+          </mat-form-field>
+          <mat-form-field class="phone-number">
+            <input matInput name="phoneNumber" placeholder="Phone Number" [(ngModel)]="companyDetails.PhoneNumber" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="form-group">
+        <mat-form-field class="office-address">
+          <textarea matInput name="officeAddress" placeholder="Office Address" [(ngModel)]="companyDetails.OfficeAddress"></textarea>
+        </mat-form-field>
+        <mat-form-field class="gst-number">
+          <input matInput name="gstNumber" placeholder="GST Number" [(ngModel)]="companyDetails.GstNumber" />
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <button mat-raised-button color="primary" (click)="updateCompany()">Update</button>
+      </div>
+    </form>
+  </mat-card>
+</div>
+  

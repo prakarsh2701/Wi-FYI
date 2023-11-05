@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <h1 class="heading">VIEW PLANS</h1>
+  <div class="box-container">
+    <ng-container *ngFor="let package of pack">
+      <div class="col-12 col-md-6 col-lg-4">
+        <mat-card class="box" (click)="openDialog(package)">
+          <div class="image">
+            <img mat-card-image class="img" [src]="'assets/images/' + package.companyName + '.png'" [alt]="package.companyName">
+          </div>
+          <div class="content">
+            <mat-card-header>
+              <mat-card-title class="package-name">{{ package.packageName }}</mat-card-title>
+              <mat-card-subtitle class="company-name">{{ package.companyName }}</mat-card-subtitle>
+              <mat-card-subtitle><app-avgrating [packageId]="package.packageId"></app-avgrating></mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <p class="description">{{ package.description }}</p>
+            </mat-card-content>
+          </div>
+        </mat-card>
+      </div>
+    </ng-container>
+  </div>
+</div>

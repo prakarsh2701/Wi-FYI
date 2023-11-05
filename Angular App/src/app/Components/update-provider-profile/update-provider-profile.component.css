@@ -1,0 +1,77 @@
+.background {
+    display: flex;
+    height: 100vh;
+    background-image: url('src\assets\images\updateprofile.png');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+.card {
+    width: 60%;
+    margin:auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(149, 23, 23, 0.1); /* Increase the box shadow */
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* align-items: center; */
+  }
+  
+  .form-row {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .form-group {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .company-name, .contact-person, .email, .phone-number, .office-address, .gst-number {
+    width: 100%;
+  }
+  
+  textarea[matInput] {
+    min-height: 150px;
+    width: 100%;
+  }
+  
+  input[type="file"] {
+    display: none;
+  }
+  
+  .form-group button {
+    margin-top: 10px;
+  }
+  .mat-form-field {
+    width: 100%; /* Adjust the width to fill the entire card */
+    margin: 10px 0; /* Add vertical margin for spacing */
+  }
+  
+  /* Style the Upload Image button */
+  .upload-image-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .upload-image-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .office-address {
+    width: 100%;
+    max-height: 100px; /* Increase the max-height as needed */
+    overflow-y: auto;
+  }
+  

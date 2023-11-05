@@ -1,0 +1,385 @@
+{
+  "Routes": [
+    { //Creating Order from Payment API
+      "UpstreamPathTemplate": "/CreateOrder",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5086
+        }
+      ],
+      "DownstreamPathTemplate": "/api/payment/initiate"
+    },
+    { //Verifying payment from payment api
+      "UpstreamPathTemplate": "/VerifyPayment",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5086
+        }
+      ],
+      "DownstreamPathTemplate": "/api/payment/verification"
+    },
+
+
+
+
+
+
+
+    { //Creating Package from Package API
+      "UpstreamPathTemplate": "/AddPackage",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5207
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Package"
+    },
+    { //Getting Package By Id From Package API 
+      "UpstreamPathTemplate": "/GetPackageById",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5207
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Package/GetPackagebyId"
+    },
+    { //Getting Package By Id From Package API 
+      "UpstreamPathTemplate": "/GetPackageByCompany",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5207
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Package/GetPackagebyCompany"
+    },
+    { //Getting All Packages From Package API 
+      "UpstreamPathTemplate": "/GetAllPackages",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5207
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Package/GetAllPackages"
+    },
+    { //Updating A given Package From Package API 
+      "UpstreamPathTemplate": "/UpdatePackage",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5207
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Package/UpdatePackage"
+    },
+    { //Deleting A given Package by Package Id From Package API 
+      "UpstreamPathTemplate": "/DeletePackageById",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5207
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Package/DeletePackageById"
+    },
+
+
+
+
+
+
+    { //Creating A new User From Registration API 
+      "UpstreamPathTemplate": "/CreateUser",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5011
+        }
+      ],
+      "DownstreamPathTemplate": "/api/User/CreateUser"
+    },
+    { //Getting A User From Registration API 
+      "UpstreamPathTemplate": "/GetUserById",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5011
+        }
+      ],
+      "DownstreamPathTemplate": "/api/User/GetUserById"
+    },
+    { //Getting All Users From Registration API 
+      "UpstreamPathTemplate": "/GetAllUsers",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5011
+        }
+      ],
+      "DownstreamPathTemplate": "/api/User/GetAllUsers"
+    },
+
+    { //Updating A User To Registration API 
+      "UpstreamPathTemplate": "/UpdateUser",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5011
+        }
+      ],
+      "DownstreamPathTemplate": "/api/User/UpdateUser"
+    },
+
+
+
+
+
+
+
+    { //Authenticate Login Using Auth API 
+      "UpstreamPathTemplate": "/AuthLogin",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5092
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Auth/Login"
+    },
+    { //Get Role of client using Auth API 
+      "UpstreamPathTemplate": "/GetRole",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5092
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Auth/"
+    },
+
+
+
+
+
+
+
+    { //Get Details of Service Provider from Service Provider API 
+      "UpstreamPathTemplate": "/GetServiceProvider",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5011
+        }
+      ],
+      "DownstreamPathTemplate": "/api/ServiceProvider/GetProviderByEmail"
+    },
+    { //Register Service Provider from Service Provider API 
+      "UpstreamPathTemplate": "/RegisterServiceProvider",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5011
+        }
+      ],
+      "DownstreamPathTemplate": "/api/ServiceProvider"
+    },
+    { //Update Service Provider from Service Provider API 
+      "UpstreamPathTemplate": "/UpdateServiceProvider",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5011
+        }
+      ],
+      "DownstreamPathTemplate": "/api/ServiceProvider/UpdateProvider"
+    },
+
+
+
+
+
+
+    { //Creating A Booking To Booking API 
+      "UpstreamPathTemplate": "/CreateBooking",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5044
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Booking/CreateBooking"
+    },
+    { //Getting A Booking By User Id From Booking API 
+      "UpstreamPathTemplate": "/GetBookingByUserId",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5044
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Booking/GetBookingByUserId"
+    },
+    { //Getting A Booking By Package Id From Booking API 
+      "UpstreamPathTemplate": "/GetBookingByPackageId",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5044
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Booking/GetBookingByPackageId"
+    },
+    { //Getting All Bookings From Booking API 
+      "UpstreamPathTemplate": "/GetAllBookings",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5044
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Booking/GetAllBookings"
+    },
+    { //Getting A Booking By Booking Id From Booking API 
+      "UpstreamPathTemplate": "/GetBookingById",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5044
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Booking/GetBookingById"
+    },
+
+
+
+
+
+
+    { //Sending An Email From Email API 
+      "UpstreamPathTemplate": "/SendEmail",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 19245
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Email/SendEmail"
+    },
+
+
+
+
+
+
+    { //Creating a Rating in the Rating Service 
+      "UpstreamPathTemplate": "/getrating",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5000
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Rating/getbyuserandpackage"
+    },
+    { //Getting a Rating from the Rating Service 
+      "UpstreamPathTemplate": "/getbypackage",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5000
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Rating/getbypackage"
+    },
+    { //Updating a Rating in the Rating Service 
+      "UpstreamPathTemplate": "/average",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5000
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Rating/average"
+    },
+    { //Updating a Rating in the Rating Service 
+      "UpstreamPathTemplate": "/PostRating",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5000
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Rating"
+    }
+
+
+
+
+
+
+
+  ]
+}
+
+
+
+
